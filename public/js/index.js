@@ -116,7 +116,7 @@ $(document).ready(function() {
 			logins += 1;
 	  	var newUser = snapshot.val();
 	 		$('#scratchpost').append(
-		 			'<div class="user-window bounceIn" id="' + snapshot.key() + '">\
+		 			'<div class="user-window bounceIn" contenteditable="true" id="' + snapshot.key() + '">\
 		 				<p class="byline">' + newUser.name + '</p>\
 		 				<p class="answer">Login successful.</p>\
 		 				<button class="delete"></button>\
