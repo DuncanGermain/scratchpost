@@ -8,7 +8,7 @@
 		<link type="text/css" rel="stylesheet" href="css/practice.css">
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="jq/jquery-ui.min.css">
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:700,400|Raleway:400,300' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="jq/jquery-ui.min.js"></script>
 		<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
@@ -26,15 +26,17 @@
 						Current Session ID: "Sample Session"
 						<button id="end-session" class="buttons">End Session</button>
 					</p>
+					<button class="buttons"><a href="html/part.html" target=blank>Participant screen</a></button>
+					<a href="index.html"><button class="buttons" id="nuke">Empty Firebase</button></a>
 					<span class="counter">Active participants: </span>
 				</div>
 		</header>
 		<section class="control-bar">
-			<button class="buttons"><a href="html/part.html" target=blank>Participant screen</a></button>
-			<a href="index.html"><button class="buttons" id="nuke">Empty Firebase</button></a>
 			<p class="light-italic bold">Please enter a prompt to be pushed to your users.</p>
-			<textarea class="question" placeholder="Quis custodiet ipsos custodes?"></textarea>
-			<button class="buttons" id="ask">Push</button>
+			<div class="holdask">
+				<textarea class="question" placeholder="Quis custodiet ipsos custodes?"></textarea>
+				<button class="buttons" id="ask">Push</button>
+			</div>
 			<section class="checkboxes light font-point-9">
 				<input type="checkbox" class="checkbox" id="noName">Anonymous posting?
 				<input type="checkbox" class="checkbox" id="noLate">Stop late entry/re-entry?

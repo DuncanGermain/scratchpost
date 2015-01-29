@@ -29,6 +29,7 @@ body{
 	color: #b0e2ff;
 	text-align: center;
 	padding: 40px 0 .10px 0;
+	text-shadow:0px 1px 2px #333333;
 }
 
 #scratchpost {
@@ -83,14 +84,6 @@ background-image: radial-gradient(ellipse closest-corner at center, #808080 0%, 
 	font-size:0.8em;;
 }
 
-.font-point-9 {
-	font-size:0.9em;
-}
-
-.light {
-	font-family:"Raleway", "300";
-}
-
 header {
 	display:inline-block;
 	color:white;
@@ -119,6 +112,8 @@ header img {
 .counter {
 	font-size: 10;
 	color: white;
+	display: block;
+	height: 14px;
 }
 
 section {
@@ -229,6 +224,18 @@ header h1 {
 	background-color:#e9e9e9;
 }
 
+#holdask {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#ask {
+	position: absolute;
+	margin: 2px 0px 0px 10px;
+}
+.checkboxes {
+	margin-top: 10px;
+}
 #join {
 	margin: 10px 0 0 0px;
 }
@@ -245,15 +252,18 @@ header h1 {
 .control-bar {
 	background-color:#F2F2F2;
 	padding:1em 2em 1em 2em;
+	width: 100%;
 }
 
 .control-bar p {
-	padding-bottom:0.4em;
+	margin-bottom:0.4em;
+	margin-top: 0.4em;
 }
 
 #scratchpost div {
 	border: 4px solid #b0e2ff;
 	border-radius: 10px;
+	box-shadow: 3px 3px 4px #333333;
 }
 
 .one-window {
@@ -325,3 +335,12 @@ header h1 {
 	margin-left:0.5em;
 	margin-right:0.5em;
 }
+
+.font-point-9 {
+	font-size:0.9em;
+}
+
+.light {
+	font-family:"Raleway", "300";
+}
+
