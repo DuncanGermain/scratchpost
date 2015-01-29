@@ -115,9 +115,10 @@ $(document).ready(function() {
 			logins += 1;
 	  	var newUser = snapshot.val();
 	 		$('#scratchpost').append(
-		 			'<div class="user-window bounceIn" contenteditable="true" id="' + snapshot.key() + '">\
+		 			'<div class="user-window bounceIn" id="' + snapshot.key() + '">\
 		 				<p class="byline">' + newUser.name + '</p>\
-		 				<p class="answer">Login successful.</p>\
+		 				<p class="answer" contenteditable="true">Login successful.</p>\
+		 				<button class="edit"></button>\
 		 				<button class="delete"></button>\
 		 			</div>');
 	 	//	$('#scratchpost > div:last').addClass('bounceIn');
@@ -136,6 +137,7 @@ $(document).ready(function() {
 	//EVENT FLOW: 04 (prev in index.js, next in part.js)
 	$('.control-bar').on('click', '#ask', function() {
 		hasBeenAsked = true;
+		console.log("Register a click.");
 		var myQuestion = $(this).prev().val(); //(this).prev is the question box.
 		var newQuestRef = questRef.push({
 			content: myQuestion
@@ -168,7 +170,11 @@ $(document).ready(function() {
 	$('#scratchpost').on('click', '.delete', function() {
 		$(this).parent().hide();
 	});
-
+	/*
+	$('#scratchpost').on('click', '.edit', function() {
+		$(this).parent().parent().attr('class', 'window-frame editing');
+	})
+*/
 }); //end of document ready function
 
 
