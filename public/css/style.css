@@ -112,6 +112,8 @@ header img {
 .counter {
 	font-size: 10;
 	color: white;
+	display: block;
+	height: 14px;
 }
 
 section {
