@@ -1,0 +1,116 @@
+body {
+	min-width:960px;
+}
+
+#add-user {
+	margin:1em;
+}
+
+.byline {
+	float:left;
+	font-size:0.6em;
+	font-style:italic;
+	padding:0.4em;
+}
+
+.window-frame {
+	padding: 30px;
+  background-color: #ccc;
+  text-align:center;
+}
+
+.user-window {
+	margin: 0 auto;
+  width: 90%;
+  background-color: #f3f3f3;
+  font-family:"Raleway";
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+  position:relative;
+  overflow-y:scroll;
+}
+
+.user-window p {
+	clear:both;
+	margin:1em;
+	text-align:left;
+	word-wrap:break-word;
+}
+
+.one-window {
+	width:100%;
+	font-size:1.6em;
+	min-height: 300px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.two-windows {
+	width:100%;
+	font-size:1.6em;
+	min-height: 150px;
+}
+
+.three-windows {
+	width:30%;
+	display:inline-block;
+	height:400px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.four-windows {
+	width:48%;
+	display:inline-block;
+	height:200px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.five-windows {
+	width:48%;
+	height:125px;
+	display:inline-block;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.six-windows {
+	width:30%;
+	display:inline-block;
+	height:200px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.seven-to-nine-windows {
+	width:30%;
+	display:inline-block;
+	height:125px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.ten-to-twelve-windows {
+	width:22%;
+	display:inline-block;
+	height:125px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.thirteen-to-fifteen-windows {
+	width:18%;
+	display:inline-block;
+	height:125px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+
+
+
+
+
+
+

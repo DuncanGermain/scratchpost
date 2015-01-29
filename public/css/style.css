@@ -1,0 +1,315 @@
+body{
+	width:100%;
+	font-family:"Roboto";
+}
+
+.delete {
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	background-image: url("http://www.arabella-kiesbauer.at/img/closebutton.png");
+	background-size: 100%;
+	float: right;
+}
+
+#sortable {
+	width: 600px;
+	height: 400px;
+}
+
+#sortable div {
+	margin: 3px;
+	padding: 1px;
+	text-align: center;
+	float: left;
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	color: white;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:visited {
+	color:#616161;
+}
+
+.background {
+	width:100%;
+/* IE10 Consumer Preview */
+background-image: -ms-radial-gradient(center, ellipse closest-corner, #808080 0%, #474747 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-radial-gradient(center, ellipse closest-corner, #808080 0%, #474747 100%);
+
+/* Opera */
+background-image: -o-radial-gradient(center, ellipse closest-corner, #808080 0%, #474747 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #808080), color-stop(1, #474747));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-radial-gradient(center, ellipse closest-corner, #808080 0%, #474747 100%);
+
+/* W3C Markup, IE10 Release Preview */
+background-image: radial-gradient(ellipse closest-corner at center, #808080 0%, #474747 100%);
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.lightgreen {
+	color:#A7FFA7;
+	text-shadow:0px 1px 3px #333333;
+	font-size:1.4em;
+}
+
+.light-italic {
+	font-style:italic;
+}
+
+.font-point-8 {
+	font-size:0.8em;;
+}
+
+.font-point-9 {
+	font-size:0.9em;
+}
+
+.light {
+	font-family:"Raleway", "300";
+}
+
+header {
+	display:inline-block;
+	color:white;
+	width:100%;
+}
+
+header img {
+	width:10em;
+	padding:0.2em 0.2em 0.2em 2em;
+	float:left;
+}
+
+.header-content {
+	font-size:2em;
+	width:33em;
+	margin:1.2em;
+	padding-left:5.8em;
+	line-height:1.4em;
+}
+
+.name-session {
+	width:22em;
+	height:2.4em;
+}
+
+.counter {
+	font-size: 10;
+	color: white;
+}
+
+section {
+	display: inline-block;
+}
+
+#playerscreen textarea {
+	background-color: #CED8F6;
+	width: 500px;
+	height: 350px;
+	border: 3px solid #6A0888;
+	padding: 3px 3px 3px 3px;
+	margin: 5px 0 5px 20px;
+	display: inline;
+}
+
+
+
+#playerscreen #history {
+	display: inline;
+}
+
+strong {
+	font-weight: bold;
+}
+
+#playerscreen p, #playerscreen input {
+	margin: 5px 5px 10px 20px;
+}
+
+#submitted h2 {
+	margin: 5px 0 0 10px;
+	padding-bottom: 6px;
+}
+
+#submitted {
+/*-moz-appearance: textfield;
+-webkit-appearance: textfield;*/
+box-shadow: 1px 1px 1px 0 #6A0888 inset;
+background-color: black;
+color: white;
+width: 500px;
+height: 350px;
+display: inline-block;
+overflow: auto;
+border: 3px solid #6A0888;
+padding: 6px 6px 6px 6px;
+}
+
+.red {
+	color: #FF0000;
+}
+
+#submitted p {
+	padding: 6px 6px 6px 8px;
+}
+
+
+header h1 {
+	margin: 10px 5px 3px 20px;
+	color: green;
+}
+
+.question {
+	width:50em;
+}
+
+.submit {
+	display: block;
+	margin: 5px 0 0 21px;
+}
+
+.buttons {
+	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	box-shadow:inset 0px 0px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:0.3em 1.2em;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #ffffff;
+}
+.buttons:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+
+#join {
+	margin: 10px 0 0 20px;
+}
+
+.buttons:active {
+	position:relative;
+	top:1px;
+}
+
+.session-end {
+	display:none;
+}
+
+.control-bar {
+	background-color:#F2F2F2;
+	padding:1em 2em 1em 2em;
+}
+
+.control-bar p {
+	padding-bottom:0.4em;
+}
+
+.one-window {
+	width:100%;
+	font-size:1.6em;
+	min-height: 300px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.two-windows {
+	width:100%;
+	font-size:1.6em;
+	min-height: 150px;
+}
+
+.three-windows {
+	width:30%;
+	display:inline-block;
+	height:400px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.four-windows {
+	width:48%;
+	display:inline-block;
+	height:200px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.five-windows {
+	width:48%;
+	height:125px;
+	display:inline-block;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.six-windows {
+	width:30%;
+	display:inline-block;
+	height:200px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.seven-to-nine-windows {
+	width:30%;
+	display:inline-block;
+	height:125px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.ten-to-twelve-windows {
+	width:22%;
+	display:inline-block;
+	height:125px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.thirteen-to-fifteen-windows {
+	width:18%;
+	display:inline-block;
+	height:125px;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
