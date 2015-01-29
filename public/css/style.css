@@ -24,6 +24,17 @@ body{
 	float: left;
 }
 
+#currentq {
+	color:#A7FFA7;
+	text-align: center;
+	padding: 2em 0 1em 0;
+}
+
+#scratchpost {
+	width: 100%;
+	background-color: transparent;
+}
+
 a {
 	text-decoration:none;
 }
