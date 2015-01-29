@@ -85,11 +85,10 @@ $(document).ready(function() {
 		question = snapshot.val();
 		currentQ = question.content;
 		qID = snapshot.key();
-
 		if (myID) {
 			$('#playerscreen').empty();
 			$('#playerscreen').append(
-				'<p><h2><strong>Prompt: </strong></h2>' + currentQ + '</p>\
+				'<p><strong>Prompt: </strong>' + currentQ + '</p>\
 				<textarea placeholder="Type your response here." class="answerbox"></textarea>\
 				<button class="submit">Submit your response</button>\
 				<p class="sysmsg">Awaiting answer.</p>'
@@ -117,7 +116,10 @@ $(document).ready(function() {
 			'<p class="red">(submitted in response to ' + currentQ + ') </p>');
 	}); //end of EVENT FLOW 06
 
-
+//add session title to user header
+	//$("#current-session-in-user-header").on("load", function() {
+	//	$(this).text("Current Session: " + )
+	//}
 
 }); //end of document ready function
 

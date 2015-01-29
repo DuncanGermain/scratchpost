@@ -14,20 +14,26 @@ body{
 	float: right;
 }
 
-#sortable {
-	width: 600px;
-	height: 400px;
+.sortable {
+	min-width: 600px;
+	min-height: 400px;
 }
 
-#sortable div {
-	margin: 3px;
-	padding: 1px;
-	text-align: center;
+.sortable div {
+	margin: 5px;
 	float: left;
-	width: 100px;
-	height: 100px;
-	background-color: gray;
-	color: white;
+}
+
+#currentq {
+	font-size: 24px;
+	color: #b0e2ff;
+	text-align: center;
+	padding: 40px 0 .10px 0;
+}
+
+#scratchpost {
+	width: 100%;
+	background-color: transparent;
 }
 
 a {
@@ -224,7 +230,7 @@ header h1 {
 }
 
 #join {
-	margin: 10px 0 0 20px;
+	margin: 10px 0 0 0px;
 }
 
 .buttons:active {
@@ -243,6 +249,11 @@ header h1 {
 
 .control-bar p {
 	padding-bottom:0.4em;
+}
+
+#scratchpost div {
+	border: 4px solid #b0e2ff;
+	border-radius: 10px;
 }
 
 .one-window {
