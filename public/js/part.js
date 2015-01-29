@@ -116,7 +116,10 @@ $(document).ready(function() {
 			'<p class="red">(submitted in response to ' + currentQ + ') </p>');
 	}); //end of EVENT FLOW 06
 
-
+//add session title to user header
+	$("#current-session-in-user-header").on("load", function() {
+		
+	}
 
 }); //end of document ready function
 
