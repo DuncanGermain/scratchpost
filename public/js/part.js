@@ -117,9 +117,9 @@ $(document).ready(function() {
 	}); //end of EVENT FLOW 06
 
 //add session title to user header
-	$("#current-session-in-user-header").on("load", function() {
-		
-	}
+	//$("#current-session-in-user-header").on("load", function() {
+	//	$(this).text("Current Session: " + )
+	//}
 
 }); //end of document ready function
 
