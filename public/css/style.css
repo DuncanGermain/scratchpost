@@ -166,6 +166,7 @@ display: inline-block;
 overflow: auto;
 border: 3px solid #6A0888;
 padding: 6px 6px 6px 6px;
+margin: 3px 3px 0 80px;
 }
 
 .red {
