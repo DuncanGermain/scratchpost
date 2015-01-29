@@ -14,20 +14,14 @@ body{
 	float: right;
 }
 
-#sortable {
-	width: 600px;
-	height: 400px;
+.sortable {
+	min-width: 600px;
+	min-height: 400px;
 }
 
-#sortable div {
-	margin: 3px;
-	padding: 1px;
-	text-align: center;
+.sortable div {
+	margin: 5px;
 	float: left;
-	width: 100px;
-	height: 100px;
-	background-color: gray;
-	color: white;
 }
 
 a {

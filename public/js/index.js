@@ -7,8 +7,8 @@ $(document).ready(function() {
 	var hasBeenAsked;
 
 	$(function() {
-		$('#sortable').sortable();
-		$('#sortable').disableSelection();
+		$('.sortable').sortable();
+		$('.sortable').disableSelection();
 	});
 
 	//Creates Firebase objects for the various user checkboxes
@@ -100,7 +100,6 @@ $(document).ready(function() {
 				.removeClass(userClasses[logins-2])
 				.addClass(userClasses[8]);
 		}
-
 	});
 
 
