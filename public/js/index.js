@@ -5,7 +5,8 @@ $(document).ready(function() {
 	var usersRef = ref.child('users');
 	var questRef = ref.child('questions');
 	var checkRef = ref.child('checkboxes');
-	var hasBeenAsked;
+	var hasBeenAsked,
+			resort;
 
 	$('.sortable').sortable({
 		cancel: ".answer"
@@ -74,34 +75,7 @@ $(document).ready(function() {
 	$('#holdNew').on('click', function() {
 		$('.answer').toggle();
 	});  //end of holdNew listener
-/*
-	var userClasses = ["one-window", "two-windows", "three-windows", "four-windows", "five-windows",
-									 "six-windows", "seven-to-nine-windows", "ten-to-twelve-windows",
-									 "thirteen-to-fifteen-windows"];
 
-	usersRef.on('child_added', function() {
-		if (logins >= 0 && logins <= 5) {
-			$(".user-window")
-				.removeClass(userClasses[logins-2])
-				.addClass(userClasses[logins-1]);
-		}
-		else if (logins >= 6 && logins <= 8){
-			$(".user-window")
-				.removeClass(userClasses[logins-2])
-				.addClass(userClasses[6]);
-		}
-		else if (logins >= 9 && logins <= 11){
-			$(".user-window")
-				.removeClass(userClasses[logins-2])
-				.addClass(userClasses[7]);
-		}
-		else if (logins >=12 && logins <=14) {
-			$(".user-window")
-				.removeClass(userClasses[logins-2])
-				.addClass(userClasses[8]);
-		}
-	});
-*/
 
 //-----------------------------MAIN FUNCTIONALITY-------------------------------
 
@@ -121,34 +95,36 @@ $(document).ready(function() {
 		 				<button class="delete"></button>\
 		 				<p class="answer" contenteditable="true">Login successful.</p>\
 					</div>');
-	 		if (logins === 1) {
-	 			$('.user-window').attr('class', 'user-window bounceIn one-window');
-	 		}
-	 		else if (logins === 2) {
-	 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
-	 		}
-	 		else if (logins === 3) {
-	 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
-	 		}
-	 		else if (logins === 4) {
-	 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
-	 		}
-	 		else if (logins === 5) {
-	 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
-	 		}
-	 		else if (logins === 6) {
-	 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
-	 		}
-	 		else if (7 <= logins <= 9) {
-	 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
-	 		}
-	 		else if (10 <= logins <= 12) {
-	 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
-	 		}
-	 		else if (13 <= logins) {
-	 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
-	 		}
-	 	//	$('#scratchpost > div:last').addClass('bounceIn');
+	 		resort = function(logins) {
+		 		if (logins === 1) {
+		 			$('.user-window').attr('class', 'user-window bounceIn one-window');
+		 		}
+		 		else if (logins === 2) {
+		 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
+		 		}
+		 		else if (logins === 3) {
+		 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
+		 		}
+		 		else if (logins === 4) {
+		 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
+		 		}
+		 		else if (logins === 5) {
+		 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
+		 		}
+		 		else if (logins === 6) {
+		 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
+		 		}
+		 		else if (7 <= logins <= 9) {
+		 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
+		 		}
+		 		else if (10 <= logins <= 12) {
+		 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
+		 		}
+		 		else if (13 <= logins) {
+		 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
+		 		}
+		 	}
+		 	resort(logins);
 	 		$('.counter').text('Active participants:  ' + logins);
 	 	}
 	});  //end of main add-user function
@@ -156,33 +132,7 @@ $(document).ready(function() {
 	usersRef.on('child_removed', function(snapshot) {
 		logins -= 1;
 		present = logins;
-		if (logins === 1) {
-	 			$('.user-window').attr('class', 'user-window bounceIn one-window');
-	 		}
-	 		else if (logins === 2) {
-	 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
-	 		}
-	 		else if (logins === 3) {
-	 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
-	 		}
-	 		else if (logins === 4) {
-	 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
-	 		}
-	 		else if (logins === 5) {
-	 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
-	 		}
-	 		else if (logins === 6) {
-	 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
-	 		}
-	 		else if (7 <= logins <= 9) {
-	 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
-	 		}
-	 		else if (10 <= logins <= 12) {
-	 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
-	 		}
-	 		else if (13 <= logins) {
-	 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
-	 		}
+		resort(logins);
 		var userGone = snapshot.val();
 		$('#scratchpost').find('#' + snapshot.key()).remove();
 		$('.counter').text('Active participants:  ' + logins);
@@ -224,45 +174,6 @@ $(document).ready(function() {
 	$('#scratchpost').on('click', '.delete', function() {
 		$(this).parent().hide();
 		present -= 1;
-		if (present === 1) {
-	 			$('.user-window').attr('class', 'user-window bounceIn one-window');
-	 		}
-	 		else if (present === 2) {
-	 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
-	 		}
-	 		else if (present === 3) {
-	 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
-	 		}
-	 		else if (present === 4) {
-	 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
-	 		}
-	 		else if (present === 5) {
-	 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
-	 		}
-	 		else if (present === 6) {
-	 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
-	 		}
-	 		else if (7 <= present <= 9) {
-	 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
-	 		}
-	 		else if (10 <= present <= 12) {
-	 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
-	 		}
-	 		else if (13 <= present) {
-	 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
-	 		}
+		resort(present);
 	});
 }); //end of document ready function
-
-
-
-
-
-
-
-
-
-
-
-
-

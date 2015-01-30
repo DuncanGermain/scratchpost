@@ -29,7 +29,6 @@ $(document).ready(function() {
 		}
 	});
 
-
 	//Begins the sign-in process by prompting the user to enter a name.
 	//EVENT FLOW: 01 (start of chain, next in part.js)
 	$('#join').on('click', function() {
@@ -119,12 +118,6 @@ $(document).ready(function() {
 		$('#submitted').append("<p>&#13" + myAnswer + "</p>" +
 			'<p class="light-italic font-point-8">(submitted in response to ' + currentQ + ') </p>');
 	}); //end of EVENT FLOW 06
-
-//add session title to user header
-	//$("#current-session-in-user-header").on("load", function() {
-	//	$(this).text("Current Session: " + )
-	//}
-
 }); //end of document ready function
 
 
