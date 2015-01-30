@@ -34,6 +34,7 @@ $(document).ready(function() {
 	//EVENT FLOW: 01 (start of chain, next in part.js)
 	$('#join').on('click', function() {
 		$('#playerscreen').empty();
+		$(this).remove();
 		if (noLate) {
 			$('#playerscreen').append('<p class="sysmsg">Sorry; your session leader is not allowing late entries and re-entries.</p>');
 		}
