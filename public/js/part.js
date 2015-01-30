@@ -89,10 +89,10 @@ $(document).ready(function() {
 		if (myID) {
 			$('#playerscreen').empty();
 			$('#playerscreen').append(
-				'<p class="control-bar"><strong>Prompt: </strong>' + currentQ + '</p>\
-				<textarea placeholder="Type your response here." class="answerbox"></textarea>\
-				<button class="submit">Submit your response</button>\
-				<p class="sysmsg">Awaiting answer.</p>'
+					'<p class="control-bar"><strong>Prompt: </strong>' + currentQ + '</p>\
+					<textarea placeholder="Type your response here." class="answerbox"></textarea>\
+					<button class="submit">Submit your response</button>\
+					<p class="sysmsg">Awaiting answer.</p>'
 				);
 		}
 	}); //end of EVENT FLOW 05
@@ -115,8 +115,9 @@ $(document).ready(function() {
 		}
 
 		$('#playerhistory:empty').append(
-			'<div id="submitted" class="user-history"><h2><strong>History:</strong></h2></div>');
-		$('#submitted').find("h2").after("<p>&#13" + myAnswer + "</p>" +
+			'<p class="control-bar"><strong>History </strong></p>\
+			<div id="submitted" class="user-history"></div>');
+		$('#submitted').append("<p>&#13" + myAnswer + "</p>" +
 			'<p class="light-italic font-point-8">(submitted in response to ' + currentQ + ') </p>');
 	}); //end of EVENT FLOW 06
 
