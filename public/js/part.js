@@ -107,7 +107,10 @@ $(document).ready(function() {
 		$('.sysmsg').text('You have submitted an answer.');
 		if (noRedo) {
 			$('#playerscreen').empty();
-			$('#playerscreen').append('<p id="sysmsg">You have submitted an answer.</p>');
+			$('#playerscreen').append(
+				'<p><strong>No resubmissions allowed.</strong></p>\
+				<textarea class="answerbox"></textarea>\
+				<p id="sysmsg">You have submitted an answer.</p>');
 		}
 
 		$('#playerhistory:empty').append(

@@ -2,6 +2,20 @@ body{
 	width:100%;
 	font-family:"Roboto";
 }
+.edit {
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	background-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-business/086357-rounded-glossy-black-icon-business-pencil6-sc45.png");
+	background-size: 100%;
+	float: right;
+}
+
+.user-window {
+	min-height: 100px;
+}
 
 .delete {
 	height: 20px;
@@ -12,17 +26,11 @@ body{
 	background-image: url("http://www.arabella-kiesbauer.at/img/closebutton.png");
 	background-size: 100%;
 	float: right;
-	margin:0.5em;
+
 }
 
-.sortable {
-	min-width: 600px;
-	min-height: 400px;
-}
-
-.sortable div {
-	margin: 5px;
-	float: left;
+.answer {
+	display: inline-block;
 }
 
 #currentq {
@@ -30,6 +38,7 @@ body{
 	color: #b0e2ff;
 	text-align: center;
 	padding: 40px 0 .10px 0;
+	text-shadow:0px 1px 2px #333333;
 }
 
 #scratchpost {
@@ -84,14 +93,6 @@ background-image: radial-gradient(ellipse closest-corner at center, #808080 0%, 
 	font-size:0.8em;;
 }
 
-.font-point-9 {
-	font-size:0.9em;
-}
-
-.light {
-	font-family:"Raleway", "300";
-}
-
 header {
 	display:inline-block;
 	color:white;
@@ -120,6 +121,8 @@ header img {
 .counter {
 	font-size: 10;
 	color: white;
+	display: block;
+	height: 14px;
 }
 
 section {
@@ -174,6 +177,7 @@ display: inline-block;
 overflow: auto;
 border: 3px solid #6A0888;
 padding: 6px 6px 6px 6px;
+margin: 3px 3px 0 80px;
 }
 
 .red {
@@ -236,6 +240,15 @@ header h1 {
 	background-color:#e9e9e9;
 }
 
+#ask {
+	display: inline;
+	bottom: 10px;
+	vertical-align: top;
+}
+
+.checkboxes {
+	margin-top: 10px;
+}
 #join {
 	margin: 10px 0 0 0px;
 }
@@ -256,6 +269,7 @@ header h1 {
 .control-bar {
 	background-color:#F2F2F2;
 	padding:1em 2em 1em 2em;
+<<<<<<< HEAD
 	width:100%;
 	display: block;
 }
@@ -272,11 +286,20 @@ header h1 {
 	font-size:1.6em;
 	font-weight:bold;
 	margin-bottom:1em;
+=======
+	width: 100%;
+}
+
+.control-bar p {
+	margin-bottom:0.4em;
+	margin-top: 0.4em;
+>>>>>>> 67022c931c50c3a51943afca2c3f413e188d47d4
 }
 
 #scratchpost div {
 	border: 4px solid #b0e2ff;
 	border-radius: 10px;
+	box-shadow: 3px 3px 4px #333333;
 }
 
 #player-input div{
@@ -355,3 +378,12 @@ header h1 {
 	margin-left:0.5em;
 	margin-right:0.5em;
 }
+
+.font-point-9 {
+	font-size:0.9em;
+}
+
+.light {
+	font-family:"Raleway", "300";
+}
+

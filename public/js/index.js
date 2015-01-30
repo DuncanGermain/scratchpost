@@ -6,9 +6,8 @@ $(document).ready(function() {
 	var checkRef = ref.child('checkboxes');
 	var hasBeenAsked;
 
-	$(function() {
-		$('.sortable').sortable();
-		$('.sortable').disableSelection();
+	$('.sortable').sortable({
+		cancel: ".answer"
 	});
 
 	//Creates Firebase objects for the various user checkboxes
@@ -117,7 +116,7 @@ $(document).ready(function() {
 	 		$('#scratchpost').append(
 		 			'<div class="user-window bounceIn" id="' + snapshot.key() + '">\
 		 				<p class="byline">' + newUser.name + '</p>\
-		 				<p class="answer">Login successful.</p>\
+		 				<p class="answer" contenteditable="true">Login successful.</p>\
 		 				<button class="delete"></button>\
 		 			</div>');
 	 	//	$('#scratchpost > div:last').addClass('bounceIn');
@@ -136,6 +135,7 @@ $(document).ready(function() {
 	//EVENT FLOW: 04 (prev in index.js, next in part.js)
 	$('.control-bar').on('click', '#ask', function() {
 		hasBeenAsked = true;
+		console.log("Register a click.");
 		var myQuestion = $(this).prev().val(); //(this).prev is the question box.
 		var newQuestRef = questRef.push({
 			content: myQuestion
@@ -168,7 +168,6 @@ $(document).ready(function() {
 	$('#scratchpost').on('click', '.delete', function() {
 		$(this).parent().hide();
 	});
-
 }); //end of document ready function
 
 
