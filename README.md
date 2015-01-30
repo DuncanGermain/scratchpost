@@ -16,10 +16,11 @@ Core functionality (complete or near-finished):
  - Optional removal of automatic bylining, to increase anonymity.
  - Optional hiding of answer fields, so as to reveal all answers at once rather than live updating (default).
  - Dynamic deletion of response fields, such that responses may be narrowed down.
+ - Dynamic rearranging of response fields, such that similar ones may be placed next to one another for comparison.
+ - Click-to-edit on the leader's end, so that responses may be played around with.
+
 
 
 Future/possible features:
  - Some kind of login/passcode such that all members can "join" a unique session (since the application will be public).
  - Toggle between "button" view (in which responses are put into screen-proportioned rectangles) and "line" view (in which each response is its own line taking the full width of the window).
- - Dynamic rearranging of response fields, such that similar ones may be placed next to one another for comparison.
- - Click-to-zoom and click-to-edit on the leader's end, so that responses may be magnified/highlighted and played around with.
