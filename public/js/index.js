@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	var logins = 0; //Number of users who have entered the session
+	var present = 0;  //Number of screens displayed on session leader's page
 	var ref = new Firebase('https://resplendent-fire-4150.firebaseio.com');
 	var usersRef = ref.child('users');
 	var questRef = ref.child('questions');
 	var checkRef = ref.child('checkboxes');
 	var hasBeenAsked;
 
-	$(function() {
-		$('.sortable').sortable();
-		$('.sortable').disableSelection();
+	$('.sortable').sortable({
+		cancel: ".answer"
 	});
 
 	//Creates Firebase objects for the various user checkboxes
@@ -74,12 +74,12 @@ $(document).ready(function() {
 	$('#holdNew').on('click', function() {
 		$('.answer').toggle();
 	});  //end of holdNew listener
-
+/*
 	var userClasses = ["one-window", "two-windows", "three-windows", "four-windows", "five-windows",
 									 "six-windows", "seven-to-nine-windows", "ten-to-twelve-windows",
 									 "thirteen-to-fifteen-windows"];
 
-	usersRef.on('child_changed', function() {
+	usersRef.on('child_added', function() {
 		if (logins >= 0 && logins <= 5) {
 			$(".user-window")
 				.removeClass(userClasses[logins-2])
@@ -101,7 +101,7 @@ $(document).ready(function() {
 				.addClass(userClasses[8]);
 		}
 	});
-
+*/
 
 //-----------------------------MAIN FUNCTIONALITY-------------------------------
 
@@ -113,14 +113,41 @@ $(document).ready(function() {
 		}
 		else {
 			logins += 1;
+			present = logins;
 	  	var newUser = snapshot.val();
 	 		$('#scratchpost').append(
 		 			'<div class="user-window bounceIn" id="' + snapshot.key() + '">\
-		 				<p class="byline">' + newUser.name + '</p>\
-		 				<p class="answer" contenteditable="true">Login successful.</p>\
-		 				<button class="edit"></button>\
+	 					<p class="byline">' + newUser.name + '</p>\
 		 				<button class="delete"></button>\
-		 			</div>');
+		 				<p class="answer" contenteditable="true">Login successful.</p>\
+					</div>');
+	 		if (logins === 1) {
+	 			$('.user-window').attr('class', 'user-window bounceIn one-window');
+	 		}
+	 		else if (logins === 2) {
+	 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
+	 		}
+	 		else if (logins === 3) {
+	 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
+	 		}
+	 		else if (logins === 4) {
+	 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
+	 		}
+	 		else if (logins === 5) {
+	 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
+	 		}
+	 		else if (logins === 6) {
+	 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
+	 		}
+	 		else if (7 <= logins <= 9) {
+	 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
+	 		}
+	 		else if (10 <= logins <= 12) {
+	 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
+	 		}
+	 		else if (13 <= logins) {
+	 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
+	 		}
 	 	//	$('#scratchpost > div:last').addClass('bounceIn');
 	 		$('.counter').text('Active participants:  ' + logins);
 	 	}
@@ -128,6 +155,34 @@ $(document).ready(function() {
 	//Listens for users dropping from the session, and removes their answer fields from the main screen.
 	usersRef.on('child_removed', function(snapshot) {
 		logins -= 1;
+		present = logins;
+		if (logins === 1) {
+	 			$('.user-window').attr('class', 'user-window bounceIn one-window');
+	 		}
+	 		else if (logins === 2) {
+	 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
+	 		}
+	 		else if (logins === 3) {
+	 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
+	 		}
+	 		else if (logins === 4) {
+	 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
+	 		}
+	 		else if (logins === 5) {
+	 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
+	 		}
+	 		else if (logins === 6) {
+	 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
+	 		}
+	 		else if (7 <= logins <= 9) {
+	 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
+	 		}
+	 		else if (10 <= logins <= 12) {
+	 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
+	 		}
+	 		else if (13 <= logins) {
+	 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
+	 		}
 		var userGone = snapshot.val();
 		$('#scratchpost').find('#' + snapshot.key()).remove();
 		$('.counter').text('Active participants:  ' + logins);
@@ -137,7 +192,6 @@ $(document).ready(function() {
 	//EVENT FLOW: 04 (prev in index.js, next in part.js)
 	$('.control-bar').on('click', '#ask', function() {
 		hasBeenAsked = true;
-		console.log("Register a click.");
 		var myQuestion = $(this).prev().val(); //(this).prev is the question box.
 		var newQuestRef = questRef.push({
 			content: myQuestion
@@ -169,12 +223,35 @@ $(document).ready(function() {
 	//Listens for the session leader's interactions with the user's answer field, and allows movement, deletion, and (someday) editing.
 	$('#scratchpost').on('click', '.delete', function() {
 		$(this).parent().hide();
+		present -= 1;
+		if (present === 1) {
+	 			$('.user-window').attr('class', 'user-window bounceIn one-window');
+	 		}
+	 		else if (present === 2) {
+	 			$('.user-window').attr('class', 'user-window bounceIn two-windows');
+	 		}
+	 		else if (present === 3) {
+	 			$('.user-window').attr('class', 'user-window bounceIn three-windows');
+	 		}
+	 		else if (present === 4) {
+	 			$('.user-window').attr('class', 'user-window bounceIn four-windows');
+	 		}
+	 		else if (present === 5) {
+	 			$('.user-window').attr('class', 'user-window bounceIn five-windows');
+	 		}
+	 		else if (present === 6) {
+	 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
+	 		}
+	 		else if (7 <= present <= 9) {
+	 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
+	 		}
+	 		else if (10 <= present <= 12) {
+	 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
+	 		}
+	 		else if (13 <= present) {
+	 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
+	 		}
 	});
-	/*
-	$('#scratchpost').on('click', '.edit', function() {
-		$(this).parent().parent().attr('class', 'window-frame editing');
-	})
-*/
 }); //end of document ready function
 
 

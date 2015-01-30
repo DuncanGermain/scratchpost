@@ -11,6 +11,7 @@ body {
 	font-size:0.6em;
 	font-style:italic;
 	padding:0.4em;
+	display: block;
 }
 
 .window-frame {

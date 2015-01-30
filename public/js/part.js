@@ -34,6 +34,7 @@ $(document).ready(function() {
 	//EVENT FLOW: 01 (start of chain, next in part.js)
 	$('#join').on('click', function() {
 		$('#playerscreen').empty();
+		$(this).remove();
 		if (noLate) {
 			$('#playerscreen').append('<p class="sysmsg">Sorry; your session leader is not allowing late entries and re-entries.</p>');
 		}
@@ -41,7 +42,7 @@ $(document).ready(function() {
 			$('#playerscreen').append(
 				'<p>Please enter your name as you want it to appear at the end of your posts.</p>\
 				<input class="name">\
-				<button class="submitname" autofocus="true">Submit</button>'
+				<button class="submitname buttons" autofocus="true">Submit</button>'
 				);
 		}
 	}); //end of EVENT FLOW 01
@@ -63,7 +64,7 @@ $(document).ready(function() {
 		$('#playerscreen').empty();
 		if (hasBeenAsked) {	//this code allows a late or re-entering user to see the current question.
 			$('#playerscreen').append(
-				'<p><strong>Prompt: </strong>' + question.content + '</p>\
+				'<p class="control-bar"><strong>Prompt: </strong>' + question.content + '</p>\
 				<textarea placeholder="Type your response here."></textarea>\
 				<button class="submit">Submit your response</button>'
 				);
@@ -73,7 +74,7 @@ $(document).ready(function() {
 		}
 		else {  //otherwise, if we're at the beginning of the session ...
 		$('#playerscreen').append(
-			'<p>Welcome, ' + myName + '. Please wait for your session leader to submit a prompt.</p>'
+			'<p>Welcome, <strong>' + myName + '</strong>. Please wait for your session leader to submit a prompt.</p>'
 			);
 		}
 	}); //end of EVENT FLOW 02
@@ -88,9 +89,9 @@ $(document).ready(function() {
 		if (myID) {
 			$('#playerscreen').empty();
 			$('#playerscreen').append(
-				'<p><strong>Prompt: </strong>' + currentQ + '</p>\
+				'<p class="control-bar"><strong>Prompt: </strong>' + currentQ + '</p>\
 				<textarea placeholder="Type your response here." class="answerbox"></textarea>\
-				<button class="submit">Submit your response</button>\
+				<button class="submit buttons">Submit your response</button>\
 				<p class="sysmsg">Awaiting answer.</p>'
 				);
 		}
@@ -107,13 +108,16 @@ $(document).ready(function() {
 		$('.sysmsg').text('You have submitted an answer.');
 		if (noRedo) {
 			$('#playerscreen').empty();
-			$('#playerscreen').append('<p id="sysmsg">You have submitted an answer.</p>');
+			$('#playerscreen').append(
+				'<p><strong>No resubmissions allowed.</strong></p>\
+				<textarea class="answerbox"></textarea>\
+				<p id="sysmsg">You have submitted an answer.</p>');
 		}
 
 		$('#playerhistory:empty').append(
-			'<div id="submitted"><h2><strong>History:</strong></h2></div>');
+			'<div id="submitted" class="user-history"><h2><strong>History:</strong></h2></div>');
 		$('#submitted').find("h2").after("<p>&#13" + myAnswer + "</p>" +
-			'<p class="red">(submitted in response to ' + currentQ + ') </p>');
+			'<p class="light-italic font-point-8">(submitted in response to ' + currentQ + ') </p>');
 	}); //end of EVENT FLOW 06
 
 //add session title to user header

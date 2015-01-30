@@ -5,7 +5,6 @@
 		<link type="text/css" rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
 		<link type="text/css" rel="stylesheet" href="css/base.css">
 		<link type="text/css" rel="stylesheet" href="css/layout.css">
-		<link type="text/css" rel="stylesheet" href="css/practice.css">
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="jq/jquery-ui.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:700,400|Raleway:400,300' rel='stylesheet' type='text/css'>
@@ -20,7 +19,7 @@
 				<div class="header-content">
 					<p class="bold lightgreen">Welcome to Scratchpost.</p>
 					<p class="light-italic font-point-8">Enter a session name to begin.</p>
-					<input class="name-session" type="text" name="name-session" placeholder="Example: English Lit 101...">
+					<input id="session-namer" class="name-session" type="text" name="name-session" placeholder="Example: English Lit 101...">
 						<button id="start-session" class="buttons">Start a Session</button>
 					<p class="session-end light-italic font-point-8">
 						Current Session ID: "Sample Session"
@@ -36,16 +35,16 @@
 			<textarea class="question" placeholder="Quis custodiet ipsos custodes?"></textarea>
 			<button class="buttons" id="ask">Push</button>
 			<section class="checkboxes light font-point-9">
-				<input type="checkbox" class="checkbox" id="noName">Anonymous posting?
-				<input type="checkbox" class="checkbox" id="noLate">Stop late entry/re-entry?
-				<input type="checkbox" class="checkbox" id="noRedo">Disallow resubmits?
-				<input type="checkbox" class="checkbox" id="reshuffle">Reshuffle on new question?
-				<input type="checkbox" class="checkbox" id="holdNew">Hide answers?
-				<input type="checkbox" class="checkbox" id="lineView">Display as rows?
+				<input type="checkbox" class="checkbox" id="noName">Anonymous posting
+				<input type="checkbox" class="checkbox" id="noLate">Stop late entry/re-entry
+				<input type="checkbox" class="checkbox" id="noRedo">Disallow resubmits
+				<input type="checkbox" class="checkbox" id="reshuffle">Reshuffle on new question
+				<input type="checkbox" class="checkbox" id="holdNew">Hide answers
+				<input type="checkbox" class="checkbox" id="lineView">Display as rows
 				<button id="export">Export</button>
 			</section>
 		</section>
-		<main class="container_960 background">
+		<main class="background">
 			<h3 id="currentq">Submissions</h3>
 			<section id="scratchpost" class="window-frame sortable">
 			</section>
