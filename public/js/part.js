@@ -113,7 +113,6 @@ $(document).ready(function() {
 				<textarea class="answerbox"></textarea>\
 				<p id="sysmsg">You have submitted an answer.</p>');
 		}
-
 		$('#playerhistory:empty').append(
 			'<p class="control-bar"><strong>History </strong></p>\
 			<div id="submitted" class="user-history"></div>');
