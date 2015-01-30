@@ -55,6 +55,7 @@ $(document).ready(function() {
 			data: 'New user!',
 		});
 		myID = newUserRef.key();
+		$('.header-content').append('<p class="greeting">' + myName + '\'s Scratchpad</p>');
 		//since submitname disappears, this sets myID permanently from a user's perspective.
 		$('#playerscreen').attr('class', myID);
 		var disconnectMe = usersRef.child(myID);
