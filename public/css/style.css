@@ -12,6 +12,7 @@ body{
 	background-image: url("http://www.arabella-kiesbauer.at/img/closebutton.png");
 	background-size: 100%;
 	float: right;
+	margin:0.5em;
 }
 
 .sortable {
@@ -125,6 +126,11 @@ section {
 	display: inline-block;
 }
 
+#playerscreen {
+	min-height:20px;
+}
+
+
 #playerscreen textarea {
 	background-color: #CED8F6;
 	width: 500px;
@@ -134,8 +140,6 @@ section {
 	margin: 5px 0 5px 20px;
 	display: inline;
 }
-
-
 
 #playerscreen #history {
 	display: inline;
@@ -147,6 +151,10 @@ strong {
 
 #playerscreen p, #playerscreen input {
 	margin: 5px 5px 10px 20px;
+}
+
+#user-main {
+	height:600px;
 }
 
 #submitted h2 {
@@ -241,18 +249,41 @@ header h1 {
 	display:none;
 }
 
+#playerscreen {
+	
+}
+
 .control-bar {
 	background-color:#F2F2F2;
 	padding:1em 2em 1em 2em;
+	width:100%;
+	display: block;
 }
 
 .control-bar p {
 	padding-bottom:0.4em;
+	width:100%;
+	display:block;
+	text-align:center;
+}
+
+.prompt {
+	text-align:center;
+	font-size:1.6em;
+	font-weight:bold;
+	margin-bottom:1em;
 }
 
 #scratchpost div {
 	border: 4px solid #b0e2ff;
 	border-radius: 10px;
+}
+
+#player-input div{
+	margin-left:auto;
+	margin-right:auto;
+	min-height:200px;
+	background-color:pink;
 }
 
 .one-window {

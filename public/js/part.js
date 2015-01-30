@@ -63,7 +63,7 @@ $(document).ready(function() {
 		$('#playerscreen').empty();
 		if (hasBeenAsked) {	//this code allows a late or re-entering user to see the current question.
 			$('#playerscreen').append(
-				'<p><strong>Prompt: </strong>' + question.content + '</p>\
+				'<p class="control-bar"><strong>Prompt: </strong>' + question.content + '</p>\
 				<textarea placeholder="Type your response here."></textarea>\
 				<button class="submit">Submit your response</button>'
 				);
@@ -88,7 +88,7 @@ $(document).ready(function() {
 		if (myID) {
 			$('#playerscreen').empty();
 			$('#playerscreen').append(
-				'<p><strong>Prompt: </strong>' + currentQ + '</p>\
+				'<p class="control-bar"><strong>Prompt: </strong>' + currentQ + '</p>\
 				<textarea placeholder="Type your response here." class="answerbox"></textarea>\
 				<button class="submit">Submit your response</button>\
 				<p class="sysmsg">Awaiting answer.</p>'
