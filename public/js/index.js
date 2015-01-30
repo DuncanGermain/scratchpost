@@ -6,9 +6,8 @@ $(document).ready(function() {
 	var checkRef = ref.child('checkboxes');
 	var hasBeenAsked;
 
-	$(function() {
-		$('.sortable').sortable();
-		$('.sortable').disableSelection();
+	$('.sortable').sortable({
+		cancel: ".answer"
 	});
 
 	//Creates Firebase objects for the various user checkboxes
@@ -118,7 +117,6 @@ $(document).ready(function() {
 		 			'<div class="user-window bounceIn" id="' + snapshot.key() + '">\
 		 				<p class="byline">' + newUser.name + '</p>\
 		 				<p class="answer" contenteditable="true">Login successful.</p>\
-		 				<button class="edit"></button>\
 		 				<button class="delete"></button>\
 		 			</div>');
 	 	//	$('#scratchpost > div:last').addClass('bounceIn');
@@ -170,11 +168,6 @@ $(document).ready(function() {
 	$('#scratchpost').on('click', '.delete', function() {
 		$(this).parent().hide();
 	});
-	/*
-	$('#scratchpost').on('click', '.edit', function() {
-		$(this).parent().parent().attr('class', 'window-frame editing');
-	})
-*/
 }); //end of document ready function
 
 

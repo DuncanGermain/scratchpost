@@ -13,6 +13,9 @@ body{
 	float: right;
 }
 
+.user-window {
+	min-height: 100px;
+}
 
 .delete {
 	height: 20px;
@@ -23,16 +26,11 @@ body{
 	background-image: url("http://www.arabella-kiesbauer.at/img/closebutton.png");
 	background-size: 100%;
 	float: right;
+	float: bottom;
 }
 
-.sortable {
-	min-width: 600px;
-	min-height: 400px;
-}
-
-.sortable div {
-	margin: 5px;
-	float: left;
+.answer {
+	display: inline-block;
 }
 
 #currentq {
