@@ -322,6 +322,11 @@ header h1 {
 	text-align:left;
 }
 
+.greeting {
+	font-size: 24px;
+	color: #b0e2ff;
+	text-shadow:0px 1px 2px #333333;
+}
 
 .prompt {
 	text-align:center;
@@ -379,7 +384,7 @@ header h1 {
 .six-windows {
 	width:30%;
 	display:inline-block;
-	height:200px;
+	height:350px;
 	margin-left:0.5em;
 	margin-right:0.5em;
 }
@@ -387,7 +392,7 @@ header h1 {
 .seven-to-nine-windows {
 	width:30%;
 	display:inline-block;
-	height:125px;
+	height:225px;
 	margin-left:0.5em;
 	margin-right:0.5em;
 }
@@ -395,15 +400,15 @@ header h1 {
 .ten-to-twelve-windows {
 	width:22%;
 	display:inline-block;
-	height:125px;
+	height:200px;
 	margin-left:0.5em;
 	margin-right:0.5em;
 }
 
-.thirteen-to-fifteen-windows {
-	width:18%;
+.thirteen-and-up-windows {
+	width:22%;
 	display:inline-block;
-	height:125px;
+	height:160px;
 	margin-left:0.5em;
 	margin-right:0.5em;
 }

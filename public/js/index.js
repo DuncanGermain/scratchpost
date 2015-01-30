@@ -114,14 +114,27 @@ $(document).ready(function() {
 		 		else if (logins === 6) {
 		 			$('.user-window').attr('class', 'user-window bounceIn six-windows');
 		 		}
-		 		else if (7 <= logins <= 9) {
+		 		else if (logins === 7) {
 		 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
 		 		}
-		 		else if (10 <= logins <= 12) {
+		 		//strange bug where saying e.g. (7 <= logins <= 9) doesn't work.  Lines 121 - 135 are a bandaid.
+		 		else if (logins === 8) {
+		 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
+		 		}
+		 		else if (logins === 9) {
+		 			$('.user-window').attr('class', 'user-window bounceIn seven-to-nine-windows');
+		 		}
+		 		else if (logins === 10) {
+		 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
+		 		}
+		 		else if (logins === 11) {
+		 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
+		 		}
+		 		else if (logins === 12) {
 		 			$('.user-window').attr('class', 'user-window bounceIn ten-to-twelve-windows');
 		 		}
 		 		else if (13 <= logins) {
-		 			$('.user-window').attr('class', 'user-window bounceIn thirteen-to-fifteen-windows');
+		 			$('.user-window').attr('class', 'user-window bounceIn thirteen-and-up-windows');
 		 		}
 		 	}
 		 	resort(logins);
