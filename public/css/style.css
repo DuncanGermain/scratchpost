@@ -1,6 +1,10 @@
-body{
+body {
 	width:100%;
 	font-family:"Roboto";
+}
+
+main {
+	background-color:#f2f2f2;
 }
 .edit {
 	height: 20px;
@@ -27,6 +31,8 @@ body{
 }
 
 #scratchpost {
+	margin-left: -25px;
+	min-height: 700px;
 	width: 100%;
 	background-color: transparent;
 }
@@ -120,10 +126,10 @@ section {
 
 
 #playerscreen textarea {
-	background-color: #CED8F6;
-	width: 500px;
-	height: 350px;
-	border: 3px solid #6A0888;
+	background-color: white;
+	width: 400px;
+	height: 250px;
+	border: 3px solid #525252;
 	padding: 3px 3px 3px 3px;
 	margin: 5px 0 5px 20px;
 	display: inline;
@@ -133,6 +139,15 @@ section {
 	display: inline;
 }
 
+.user-history {
+	background-color: white;
+	width: 400px;
+	height: 250px;
+	border: 3px solid #525252;
+	padding: 3px 3px 3px 3px;
+	margin: 5px 0 5px 20px;
+	display: inline;
+}
 strong {
 	font-weight: bold;
 }
@@ -151,23 +166,17 @@ strong {
 }
 
 #submitted {
-/*-moz-appearance: textfield;
--webkit-appearance: textfield;*/
-box-shadow: 1px 1px 1px 0 #6A0888 inset;
-background-color: black;
+background-color: #777;
+width: 400px;
+height: 250px;
+border: 3px solid #525252;
+padding: 3px 3px 3px 3px;
+margin: 5px 0 5px 20px;
 color: white;
-width: 500px;
-height: 350px;
 display: inline-block;
-overflow: auto;
-border: 3px solid #6A0888;
-padding: 6px 6px 6px 6px;
-margin: 3px 3px 0 80px;
+overflow-y: scroll;
 }
 
-.red {
-	color: #FF0000;
-}
 
 #submitted p {
 	padding: 6px 6px 6px 8px;
@@ -187,7 +196,7 @@ header h1 {
 	display: block;
 	margin: 5px 0 0 21px;
 }
-
+/*
 .buttons {
 	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
@@ -224,6 +233,48 @@ header h1 {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
 	background-color:#e9e9e9;
 }
+*/
+
+.buttons {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.buttons:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+.buttons:active {
+	position:relative;
+	top:1px;
+}
 
 #ask {
 	display: inline;
@@ -245,10 +296,6 @@ header h1 {
 
 .session-end {
 	display:none;
-}
-
-#playerscreen {
-
 }
 
 #add-user {
@@ -306,7 +353,6 @@ header h1 {
 .control-bar {
 	background-color:#F2F2F2;
 	padding:1em 2em 1em 2em;
-<<<<<<< HEAD
 	width:100%;
 	display: block;
 }
@@ -315,22 +361,16 @@ header h1 {
 	padding-bottom:0.4em;
 	width:100%;
 	display:block;
-	text-align:center;
+	text-align:left;
 }
+
 
 .prompt {
 	text-align:center;
 	font-size:1.6em;
 	font-weight:bold;
 	margin-bottom:1em;
-=======
-	width: 100%;
-}
-
-.control-bar p {
-	margin-bottom:0.4em;
-	margin-top: 0.4em;
->>>>>>> 67022c931c50c3a51943afca2c3f413e188d47d4
+	width:100%;
 }
 
 #player-input div{
@@ -418,3 +458,6 @@ header h1 {
 	font-family:"Raleway", "300";
 }
 
+#p-margin-fix {
+	margin-left:-30px;
+}
