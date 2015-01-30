@@ -1,3 +1,6 @@
+http://scratchpost.herokuapp.com/index.html
+http://scratchpost.herokuapp.com/html/part.html
+
 The end goal of this project is a web application that collects input from up to thirty users and displays it in a single window.
 
 Example: a middle school teacher using a smartboard/projector has put up a grammatically incorrect sentence.  Each student submits their correction; all of the corrected sentences appear in a grid on the screen, where they can be zoomed, rearranged, and dynamically edited or compared.
