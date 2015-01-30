@@ -41,7 +41,7 @@ $(document).ready(function() {
 			$('#playerscreen').append(
 				'<p>Please enter your name as you want it to appear at the end of your posts.</p>\
 				<input class="name">\
-				<button class="submitname" autofocus="true">Submit</button>'
+				<button class="submitname buttons" autofocus="true">Submit</button>'
 				);
 		}
 	}); //end of EVENT FLOW 01
@@ -73,7 +73,7 @@ $(document).ready(function() {
 		}
 		else {  //otherwise, if we're at the beginning of the session ...
 		$('#playerscreen').append(
-			'<p>Welcome, ' + myName + '. Please wait for your session leader to submit a prompt.</p>'
+			'<p>Welcome, <strong>' + myName + '</strong>. Please wait for your session leader to submit a prompt.</p>'
 			);
 		}
 	}); //end of EVENT FLOW 02
@@ -90,7 +90,7 @@ $(document).ready(function() {
 			$('#playerscreen').append(
 				'<p class="control-bar"><strong>Prompt: </strong>' + currentQ + '</p>\
 				<textarea placeholder="Type your response here." class="answerbox"></textarea>\
-				<button class="submit">Submit your response</button>\
+				<button class="submit buttons">Submit your response</button>\
 				<p class="sysmsg">Awaiting answer.</p>'
 				);
 		}
@@ -114,9 +114,9 @@ $(document).ready(function() {
 		}
 
 		$('#playerhistory:empty').append(
-			'<div id="submitted"><h2><strong>History:</strong></h2></div>');
+			'<div id="submitted" class="user-history"><h2><strong>History:</strong></h2></div>');
 		$('#submitted').find("h2").after("<p>&#13" + myAnswer + "</p>" +
-			'<p class="red">(submitted in response to ' + currentQ + ') </p>');
+			'<p class="light-italic font-point-8">(submitted in response to ' + currentQ + ') </p>');
 	}); //end of EVENT FLOW 06
 
 //add session title to user header
