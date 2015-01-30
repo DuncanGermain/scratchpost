@@ -22,8 +22,10 @@ Core functionality (complete or near-finished):
  - Dynamic rearranging of response fields, such that similar ones may be placed next to one another for comparison.
  - Click-to-edit on the leader's end, so that responses may be played around with.
 
-
-
 Future/possible features:
  - Some kind of login/passcode such that all members can "join" a unique session (since the application will be public).
  - Toggle between "button" view (in which responses are put into screen-proportioned rectangles) and "line" view (in which each response is its own line taking the full width of the window).
+
+KNOWN BUGS:
+ - Player screen history window is poorly styled and resistant to change
+ - Entire #scratchpost is haxored to appear in ALMOST the right place (dirty fix)
