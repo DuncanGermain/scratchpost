@@ -91,7 +91,7 @@ $(document).ready(function() {
 			$('#playerscreen').append(
 				'<p class="control-bar"><strong>Prompt: </strong>' + currentQ + '</p>\
 				<textarea placeholder="Type your response here." class="answerbox"></textarea>\
-				<button class="submit buttons">Submit your response</button>\
+				<button class="submit">Submit your response</button>\
 				<p class="sysmsg">Awaiting answer.</p>'
 				);
 		}
